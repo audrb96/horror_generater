@@ -15,18 +15,13 @@ models = {
 def gpt2():
     context = request.form['context']
     model = request.form['model']
-    length = request.form['length']
-
     url = models[model]
 
-    if length == "short":
-        length = random.randrange(2, 6)
-    else:
-        length = 20
+    length = 300
 
     data = {
         "text": context,
-        "num_samples": 5,
+        "num_samples": 1,
         "length": length
     }
 

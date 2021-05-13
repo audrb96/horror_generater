@@ -1,0 +1,82 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@700&display=swap');
+
+body{
+background-image: url(../image/background.jpg);
+    background-size : cover;
+    background-attachment: fixed;
+
+}
+
+.title{
+    font-family: 'Sansita Swashed', cursive;
+    font-size: 6rem;
+    text-align: center;
+    color: #FF0000;
+}
+
+.click{
+     font-family: 'Sansita Swashed', cursive;
+    color: #FF0000;
+    font-size: 2rem;
+}
+
+.context{
+    font-family: 'Sansita Swashed', cursive;
+    margin: 0 5rem 0 5rem;
+    font-size : 2rem;
+    color: #FF0000;
+}
+
+
+.jumbotron{
+    background-color :#000000;
+    margin: 10rem auto;
+    border-radius: 3rem;
+}
+
+.horror-image input{
+    margin: 0; padding: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+     appearance:none;
+}
+
+.horror-image input:active +.horror{opacity: .9;}
+.horror-image input:active +.horror{
+    -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+}
+
+.horror{
+    align-items: center;
+  cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:252px;height:252px;
+    -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+    -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
+       -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
+            filter: brightness(1.8) grayscale(1) opacity(.7);
+}
+
+.horror:hover{
+    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+       -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+            filter: brightness(1.2) grayscale(.5) opacity(.9);
+}
+
+.Ghost{background-image: url(../image/ghost.jpg) }
+.Vampire{background-image: url(../image/Vampire.jpg) }
+.Killer{background-image: url(../image/killer.jpg) }
+.Demon{background-image: url(../image/demon.jpg) }
+.Succubus{background-image: url(../image/succubus.jpg) }
+.Clown{background-image: url(../image/clown.jpg) }
+.Ailen{background-image: url(../image/ailen.jpg) }
+.Zombie{background-image: url(../image/zombie.jpg) }

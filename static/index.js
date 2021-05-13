@@ -1,24 +1,19 @@
 function suggestion() {
-    var textarea = document.getElementById("context");
-    var context = textarea.value;
 
-    var models = document.getElementById("model");
-    var model = models.options[models.selectedIndex].value;
+    var model = "gpt2-horror-stories";
 
-    var lengths = document.getElementsByName("length");
-    var length = '';
-    if (lengths[0].checked){
-        length = lengths[0].value;
+    var monsterlen = document.getElementsByName("monster").length;
+    var monster ="";
+
+    for(var i =0;i<monsterlen;i++){
+        if(document.getElementsByName("monster")[i].checked==true){
+            monster = document.getElementsByName("monster")[i].value;
+        }
     }
-    else{
-        length = lengths[1].value;
-    }
-
 
     var formData = new FormData();
-    formData.append("context", context );
+    formData.append("context", monster );
     formData.append("model", model);
-    formData.append("length", length);
     fetch(
         "/gpt2",
         {
@@ -36,15 +31,15 @@ function suggestion() {
     })
     .then(response => response.json())
     .then(response => {
-        var items = document.getElementsByClassName("item");
+        var element = document.getElementById("context");
 
-        for (let index = 0; index < items.length; index++) {
-            items[index].innerHTML = response[index];
-        }
+            element.innerHTML = monster + response[0];
+
     })
     .catch(e => {
-        var item = document.getElementsByClassName("item")[0];
-        item.innerHTML=e;
+
+        var element = document.getElementById("context");
+        element.innerHTML = monster+e;
     })
 }
 
