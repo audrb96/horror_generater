@@ -44,8 +44,8 @@ Chrome사용을 권장합니다<br>
 - GKE
 
 ## Acknowledgments
-* 처음엔 huggingface에서 fine-tuning된 모델들 말고 직접 data set을 가져와서 fine-tuning을 하려고 했습니다. <br>
-kaggle에서 dataset을 가져와서 전처리한 후에 gpt2에서 124M모델을 생성하고 encode까지는 되었으나 tensorflow 2.0 부터는 contrib모듈을 사용하지 않아 gpt2가 작동이 되지 않는 문제가 있었습니다.
+* 처음엔 huggingface에서 fine-tuning된 모델들 말고 직접 dataset을 가져와서 fine-tuning을 하려고 했습니다. <br>
+[kaggle](https://www.kaggle.com/datasets)에서 dataset을 가져와서 전처리한 후에 gpt2에서 124M모델을 생성하고 encode까지는 되었으나 tensorflow 2.0 부터는 contrib모듈을 사용하지 않아 gpt2가 작동이 되지 않는 문제가 있었습니다.
 그래서 tensorflow 1.15버전을 설치하려고 했으나 python3.8부터는 tensorflow 1.x 버전을 설치하지 못하는 것 같아서 오랫동안 찾아보았지만 결국 해결방법을 찾지 못했습니다. ㅠ
 * 딥러닝엔 전혀 무지했지만 유튜브와 많은 구글의 영어로된 글들을 천천히 살펴보면서 공부한 부분이 힘들기는 했지만 뿌듯했습니다.
 * tensorflow를 많이 해보지는 않았지만 점점 관심이 갔습니다. tensorflow 활용법을 익히고 다음에는 꼭 직접 training 해보고 싶다는 생각이 들었습니다.
